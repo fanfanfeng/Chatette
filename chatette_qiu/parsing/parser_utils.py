@@ -11,7 +11,7 @@ the parsing of template files.
 import re
 from enum import Enum
 
-from chatette import deprecations
+from chatette_qiu import deprecations
 import chatette_qiu.modifiers.representation as mods
 
 COMMENT_SYM_DEPRECATED = ';'

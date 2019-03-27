@@ -6,7 +6,7 @@ Contains the interpreter that runs in a terminal in interactive mode.
 from __future__ import print_function
 import io
 
-from chatette import __version__
+from chatette_qiu import __version__
 from chatette_qiu.utils import print_DBG
 
 from chatette_qiu.cli.interactive_commands import exit_command, stats_command, \

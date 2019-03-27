@@ -4,7 +4,7 @@
 import argparse
 import sys
 
-from chatette import __version__
+from chatette_qiu import __version__
 from chatette_qiu.facade import Facade
 from chatette_qiu.cli.interpreter import CommandLineInterpreter
 

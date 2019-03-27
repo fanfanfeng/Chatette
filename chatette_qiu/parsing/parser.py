@@ -36,7 +36,10 @@ class Parser(object):
         self.all_files = []
         if os.path.isdir(master_filename):
             for file in os.listdir(master_filename):
-                self.all_files.append(os.path.join(master_filename, file))
+                file_path = os.path.join(master_filename, file)
+                if os.path.isfile(file_path):
+                    self.all_files.append(file_path)
+
             self.tokenizer = Tokenizer(self.all_files[0])
         else:
             self.tokenizer = Tokenizer(master_filename)
