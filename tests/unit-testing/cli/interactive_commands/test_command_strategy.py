@@ -1,16 +1,16 @@
 """
 Test module.
 Tests the functions
-in module `chatette.cli.interactive_commands.command_strategy`.
+in module `chatette_qiu.cli.interactive_commands.command_strategy`.
 """
 
 import re
 import pytest
 
-from chatette.facade import Facade
-from chatette.cli.interactive_commands.command_strategy import CommandStrategy
-from chatette.cli.terminal_writer import RedirectionType
-from chatette.parsing.parser_utils import UnitType
+from chatette_qiu.facade import Facade
+from chatette_qiu.cli.interactive_commands.command_strategy import CommandStrategy
+from chatette_qiu.cli.terminal_writer import RedirectionType
+from chatette_qiu.parsing.parser_utils import UnitType
 
 
 FACADE = None
@@ -18,7 +18,7 @@ def get_facade():
     global FACADE
     if FACADE is None:
         FACADE = \
-            Facade("tests/unit-testing/cli/interactive_commands/toilets.chatette",
+            Facade("tests/unit-testing/cli/interactive_commands/toilets.chatette_qiu",
                    "tests/unit-testing/cli/interactive_commands/", None, False,
                    None)
         FACADE.run_parsing()
@@ -26,7 +26,7 @@ def get_facade():
 
 def new_facade():
     facade = \
-        Facade("tests/unit-testing/cli/interactive_commands/toilets.chatette",
+        Facade("tests/unit-testing/cli/interactive_commands/toilets.chatette_qiu",
                "tests/unit-testing/cli/interactive_commands/", None, False,
                None)
     facade.run_parsing()

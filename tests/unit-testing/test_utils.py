@@ -1,24 +1,24 @@
 """
 Test module.
-Tests the functions in module 'chatette.utils'.
+Tests the functions in module 'chatette_qiu.utils'.
 """
 
 import sys
 import pytest
 import imp
 
-import chatette.utils
-from chatette.utils import cast_to_unicode, choose
+import chatette_qiu.utils
+from chatette_qiu.utils import cast_to_unicode, choose
 
 
 class TestPrints(object):
     def test_existences(self):
-        assert "print_DBG" in dir(chatette.utils)
-        assert "print_warn" in dir(chatette.utils)
+        assert "print_DBG" in dir(chatette_qiu.utils)
+        assert "print_warn" in dir(chatette_qiu.utils)
     
     def test_no_return(self):
-        assert chatette.utils.print_DBG("Test") is None
-        assert chatette.utils.print_warn("Test") is None
+        assert chatette_qiu.utils.print_DBG("Test") is None
+        assert chatette_qiu.utils.print_warn("Test") is None
 
 
 class TestCastToUnicode(object):
@@ -107,4 +107,4 @@ class TestChoose(object):
 
 class TestMain(object):
     def test_main(self):
-        imp.load_source("__main__", "chatette/utils.py")
+        imp.load_source("__main__", "chatette_qiu/utils.py")

@@ -1,13 +1,13 @@
 """
 Test module
 Tests the functionalities present in module
-`chatette.cli.interactive_commands.exist_command`.
+`chatette_qiu.cli.interactive_commands.exist_command`.
 """
 
 import pytest
 
-from chatette.cli.interactive_commands.command_strategy import CommandStrategy
-from chatette.cli.interactive_commands.exist_command import ExistCommand
+from chatette_qiu.cli.interactive_commands.command_strategy import CommandStrategy
+from chatette_qiu.cli.interactive_commands.exist_command import ExistCommand
 
 from test_command_strategy import get_facade
 

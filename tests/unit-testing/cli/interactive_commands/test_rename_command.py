@@ -1,16 +1,16 @@
 """
 Test module.
 Tests the functionalities in module
-`chatette.cli.interactive_commands.rename_command`.
+`chatette_qiu.cli.interactive_commands.rename_command`.
 """
 
 import pytest
 
 from test_command_strategy import new_facade, get_facade
 
-from chatette.cli.interactive_commands.command_strategy import CommandStrategy
-from chatette.cli.interactive_commands.rename_command import RenameCommand
-from chatette.parsing.parser_utils import UnitType
+from chatette_qiu.cli.interactive_commands.command_strategy import CommandStrategy
+from chatette_qiu.cli.interactive_commands.rename_command import RenameCommand
+from chatette_qiu.parsing.parser_utils import UnitType
 
 
 def test_obj():

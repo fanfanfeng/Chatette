@@ -1,9 +1,9 @@
 """
 Test module.
-Tests the functions and methods in module `chatette.cli.terminal_writer`.
+Tests the functions and methods in module `chatette_qiu.cli.terminal_writer`.
 """
 
-from chatette.cli.terminal_writer import RedirectionType, TerminalWriter
+from chatette_qiu.cli.terminal_writer import RedirectionType, TerminalWriter
 
 
 class TestInitTerminalWriter(object):

@@ -1,11 +1,11 @@
 """
 Test module.
-Tests the functions in module 'chatette.parsing.parser_utils'.
+Tests the functions in module 'chatette_qiu.parsing.parser_utils'.
 """
 
 import pytest
 
-from chatette.parsing.parser_utils import *
+from chatette_qiu.parsing.parser_utils import *
 
 
 class TestStripComments(object):

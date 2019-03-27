@@ -8,9 +8,9 @@ import io, shutil
 
 import pytest
 
-from chatette.parsing.parser import Parser
-from chatette.generator import Generator
-from chatette.adapters import RasaAdapter, JsonListAdapter
+from chatette_qiu.parsing.parser import Parser
+from chatette_qiu.generator import Generator
+from chatette_qiu.adapters import RasaAdapter, JsonListAdapter
 
 
 class ChatetteFacade(object):
@@ -141,9 +141,9 @@ class TestSystem(object):
 
         input_dir_path = "tests/system-testing/inputs/generate-all/"
         input_filenames = \
-            ["simplest.chatette", "only-words.chatette",
-             "words-and-groups.chatette", "alias.chatette", "include.chatette",
-             "slot.chatette"]
+            ["simplest.chatette_qiu", "only-words.chatette_qiu",
+             "words-and-groups.chatette_qiu", "alias.chatette_qiu", "include.chatette_qiu",
+             "slot.chatette_qiu"]
         for filename in input_filenames:
             file_path = os.path.join(input_dir_path, filename)
             facade.run(file_path)
@@ -199,8 +199,8 @@ class TestSystem(object):
 
         input_dir_path = "tests/system-testing/inputs/generate-nb/training-only/"
         input_filenames = \
-            ["only-words.chatette", "words-and-groups.chatette",
-             "alias.chatette", "include.chatette", "slot.chatette"]
+            ["only-words.chatette_qiu", "words-and-groups.chatette_qiu",
+             "alias.chatette_qiu", "include.chatette_qiu", "slot.chatette_qiu"]
         for filename in input_filenames:
             file_path = os.path.join(input_dir_path, filename)
             facade.run(file_path)
@@ -229,19 +229,19 @@ class TestSystem(object):
                                         "' shouldn't be a synonym of '" + 
                                         key + "'")
 
-        filename_zero = "zero-ex.chatette"
+        filename_zero = "zero-ex.chatette_qiu"
         file_path = os.path.join(input_dir_path, filename_zero)
         facade.run(file_path)
         if len(facade.train_examples) != 0:
-            pytest.fail("When dealing with file 'zero-ex.chatette', no "+
+            pytest.fail("When dealing with file 'zero-ex.chatette_qiu', no "+
                         "examples should be generated.\nGenerated: "+
                         str(facade.train_examples))
 
-        filename_one = "one-ex.chatette"
+        filename_one = "one-ex.chatette_qiu"
         file_path = os.path.join(input_dir_path, filename_one)
         facade.run(file_path)
         if len(facade.train_examples) != 1:
-            pytest.fail("When dealing with file 'one-ex.chatette', one "+
+            pytest.fail("When dealing with file 'one-ex.chatette_qiu', one "+
                         "examples should be generated.\nGenerated: "+
                         str(facade.train_examples))
 

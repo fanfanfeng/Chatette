@@ -1,9 +1,9 @@
 """
 Test module.
-Tests the functions in module 'chatette.utils'.
+Tests the functions in module 'chatette_qiu.utils'.
 """
 
-from chatette.units import Example, may_change_leading_case, \
+from chatette_qiu.units import Example, may_change_leading_case, \
                            randomly_change_case, with_leading_upper, \
                            with_leading_lower, may_get_leading_space
 

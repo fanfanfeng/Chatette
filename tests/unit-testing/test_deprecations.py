@@ -1,13 +1,13 @@
 """
 Test module.
-Tests the functions in module 'chatette.utils'.
+Tests the functions in module 'chatette_qiu.utils'.
 """
 
-import chatette.deprecations
-from chatette.deprecations import warn_semicolon_comments
+import chatette_qiu.deprecations
+from chatette_qiu.deprecations import warn_semicolon_comments
 
 
 def test_several_calls():
-    assert not chatette.deprecations._SEMICOLON_COMMENTS_DEPRECATION_WARNED
+    assert not chatette_qiu.deprecations._SEMICOLON_COMMENTS_DEPRECATION_WARNED
     warn_semicolon_comments()
-    assert chatette.deprecations._SEMICOLON_COMMENTS_DEPRECATION_WARNED
+    assert chatette_qiu.deprecations._SEMICOLON_COMMENTS_DEPRECATION_WARNED

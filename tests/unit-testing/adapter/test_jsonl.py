@@ -1,10 +1,10 @@
 """
 Test module.
 Tests the functionalities present in module
-`chatette.adapters.jsonl`.
+`chatette_qiu.adapters.jsonl`.
 """
 
-from chatette.adapters.jsonl import JsonListAdapter
+from chatette_qiu.adapters.jsonl import JsonListAdapter
 
 
 

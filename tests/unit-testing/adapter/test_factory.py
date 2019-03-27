@@ -1,14 +1,14 @@
 """
 Test module.
 Tests the functionalities that are present in module
-`chatette.adapters.factory`.
+`chatette_qiu.adapters.factory`.
 """
 
 import pytest
 
-from chatette.adapters.factory import create_adapter
-from chatette.adapters.jsonl import JsonListAdapter
-from chatette.adapters.rasa import RasaAdapter
+from chatette_qiu.adapters.factory import create_adapter
+from chatette_qiu.adapters.jsonl import JsonListAdapter
+from chatette_qiu.adapters.rasa import RasaAdapter
 
 
 def test_valid():

@@ -1,17 +1,17 @@
 """
 Test module.
 Tests the functionalities present in module
-`chatette.cli.interactive_commands.decalre_command`.
+`chatette_qiu.cli.interactive_commands.decalre_command`.
 """
 
 import pytest
 
 from test_command_strategy import new_facade
 
-from chatette.cli.interactive_commands.command_strategy import CommandStrategy
-from chatette.cli.interactive_commands.declare_command import DeclareCommand
+from chatette_qiu.cli.interactive_commands.command_strategy import CommandStrategy
+from chatette_qiu.cli.interactive_commands.declare_command import DeclareCommand
 
-from chatette.parsing.parser_utils import UnitType
+from chatette_qiu.parsing.parser_utils import UnitType
 
 
 def test_obj():

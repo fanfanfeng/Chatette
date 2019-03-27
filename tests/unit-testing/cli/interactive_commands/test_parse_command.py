@@ -1,13 +1,13 @@
 """
 Test module.
 Tests the functionalities present in module
-`chatette.cli.interactive_commands.parse_command`.
+`chatette_qiu.cli.interactive_commands.parse_command`.
 """
 
 import pytest
 
-from chatette.cli.interactive_commands.command_strategy import CommandStrategy
-from chatette.cli.interactive_commands.parse_command import ParseCommand
+from chatette_qiu.cli.interactive_commands.command_strategy import CommandStrategy
+from chatette_qiu.cli.interactive_commands.parse_command import ParseCommand
 
 from test_command_strategy import new_facade
 
@@ -33,15 +33,15 @@ def test_err(capsys):
 
 def test_execute(capsys):
     cmd = ParseCommand(
-            "parse tests/unit-testing/cli/interactive_commands/toilets.chatette"
+            "parse tests/unit-testing/cli/interactive_commands/toilets.chatette_qiu"
         )
     assert cmd.command_tokens == \
         ["parse",
-         "tests/unit-testing/cli/interactive_commands/toilets.chatette"]
+         "tests/unit-testing/cli/interactive_commands/toilets.chatette_qiu"]
     cmd.execute(new_facade())
     captured = capsys.readouterr()
     assert "[DBG] Parsing master file: " + \
-           "tests/unit-testing/cli/interactive_commands/toilets.chatette\n" + \
+           "tests/unit-testing/cli/interactive_commands/toilets.chatette_qiu\n" + \
            "[DBG] Parsing finished!" in captured.out
 
 

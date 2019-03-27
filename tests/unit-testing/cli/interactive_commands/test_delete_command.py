@@ -1,16 +1,16 @@
 """
 Test module.
 Tests the functionalities present in module
-`chatette.cli.interactive_commands.delete_command`.
+`chatette_qiu.cli.interactive_commands.delete_command`.
 """
 
 import pytest
 
 from test_command_strategy import new_facade
 
-from chatette.cli.interactive_commands.command_strategy import CommandStrategy
-from chatette.cli.interactive_commands.delete_command import DeleteCommand
-from chatette.parsing.parser_utils import UnitType
+from chatette_qiu.cli.interactive_commands.command_strategy import CommandStrategy
+from chatette_qiu.cli.interactive_commands.delete_command import DeleteCommand
+from chatette_qiu.parsing.parser_utils import UnitType
 
 
 def test_obj():

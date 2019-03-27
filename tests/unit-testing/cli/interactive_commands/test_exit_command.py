@@ -1,12 +1,12 @@
 """
 Test module.
 Tests the functionalities in module
-`chatette.cli.interactive_commands.exit_command`.
+`chatette_qiu.cli.interactive_commands.exit_command`.
 """
 
 import pytest
 
-from chatette.cli.interactive_commands.exit_command import *
+from chatette_qiu.cli.interactive_commands.exit_command import *
 
 
 def test_obj():

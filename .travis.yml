@@ -10,7 +10,7 @@ python:
 install:
 - pip install -r requirements/test.txt
 script:
-- python -m pytest --cov=chatette tests/
+- python -m pytest --cov=chatette_qiu tests/
 after_script:
 - cd ~
 after_success:

@@ -1,13 +1,13 @@
 """
 Test module
 Tests the functionalities that are contained in module
-`chatette.cli.interactive_commands.stats_command`.
+`chatette_qiu.cli.interactive_commands.stats_command`.
 """
 
 import pytest
 
-from chatette.cli.interactive_commands.command_strategy import CommandStrategy
-from chatette.cli.interactive_commands.stats_command import StatsCommand
+from chatette_qiu.cli.interactive_commands.command_strategy import CommandStrategy
+from chatette_qiu.cli.interactive_commands.stats_command import StatsCommand
 
 from test_command_strategy import get_facade
 

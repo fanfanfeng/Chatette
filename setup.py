@@ -9,17 +9,16 @@ from setuptools import find_packages, setup
 # https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/quickstart.html
 
 setup(
-    name="chatette",
-    version="1.4.1",
-    description="A dataset generator for Rasa NLU",
+    name="chatette_qiu",
+    version="1.4.2",
+    description="A dataset generator for Rasa NLU,copy from https://github.com/SimGus/Chatette,",
     author="SimGus",
     license="MIT",
-    url="https://github.com/SimGus/Chatette",
+    url="https://github.com/fanfanfeng/Chatette",
     packages=find_packages(),
-    long_description=open(join(dirname(__file__), "README.md")).read(),
+    long_description=open(join(dirname(__file__), "README.md"),mode='r',encoding='utf-8').read(),
     long_description_content_type="text/markdown",
     classifiers=[
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
