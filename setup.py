@@ -10,7 +10,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="chatette_qiu",
-    version="1.4.2",
+    version="1.4.4",
     description="A dataset generator for Rasa NLU,copy from https://github.com/SimGus/Chatette,",
     author="SimGus",
     license="MIT",
