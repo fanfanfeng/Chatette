@@ -4,7 +4,7 @@ import random
 from chatette_qiu.units import UnitDefinition#, Example
 from .example import IntentExample
 from threading import Thread
-
+import time
 
 class IntentDefinition(UnitDefinition):
     """
@@ -85,23 +85,26 @@ class IntentDefinition(UnitDefinition):
             generated_examples = []
             thread_list = []
 
-            def make_sample_item():
+            def make_sample_item(i):
                 while len(generated_examples) < nb_examples_asked:
-                    print("count generated_examples : %s" % len(generated_examples))
-                    nb_iterations = 0
-                    while nb_iterations < 50:  # 50 is completely arbitrary
-                        current_example = self.generate_random()
-                        current_example.text = current_example.text.strip()  # Strip for safety
-                        if (current_example not in generated_examples
-                            and (training_examples is None
-                                 or current_example not in training_examples)):
-                            generated_examples.append(
-                                IntentExample(self.name, current_example.text,
-                                              current_example.entities))
-                            break
+                    print("thread %s ,count generated_examples : %s" % (i,len(generated_examples)))
+                    #nb_iterations = 0
+                    #while nb_iterations < 50:  # 50 is completely arbitrary
+                    current_example = self.generate_random()
+                    current_example.text = current_example.text.strip()  # Strip for safety
+                    #if (current_example not in generated_examples
+                    #    and (training_examples is None
+                    #         or current_example not in training_examples)):
 
-            for _ in range(30):
-                t =  Thread(target=make_sample_item)
+                    generated_examples.append(
+                        IntentExample(self.name, current_example.text,
+                                      current_example.entities))
+
+                    #break
+
+
+            for i in range(30):
+                t =  Thread(target=make_sample_item,args=(i,))
                 thread_list.append(t)
 
             for t in thread_list:
